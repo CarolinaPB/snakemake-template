@@ -15,6 +15,7 @@ Recommended - give the profile a name related to your pipeline (ex: polish-assem
 conda create --name <env> --file requirements.txt
 ```
 
+(by creating an environment from requirements.txt you'll be creating and environment that already has snakemake)
 ### Activate environment
 ```
 conda activate <env>
