@@ -39,8 +39,7 @@ mkdir -p ~/.config/snakemake/<profile name>
 #### Add config.yaml to that directory and add the specifications:
 ```
 jobs: 10
-cluster: "sbatch -t {resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} --job-name={rule} --exclude=fat001,fat002,fat101,fat100 --output=logs_slurm/{rule}.out --error=logs_slurm/{rule}.err"
-default-resources: [time_min=180, cpus=16, mem_mb=16000]
+cluster: "sbatch -t 1:0:0 --mem=16000 -c 16 --job-name={rule} --exclude=fat001,fat002,fat101,fat100 --output=logs_slurm/{rule}.out --error=logs_slurm/{rule}.err"
 
 use-conda: true
 ```
