@@ -7,7 +7,8 @@ include: "rules/create_file_log.smk"
 
 rule all:
     input:
-        files_log
+        files_log,
+        'example.txt'
 
 rule example:
     input:
