@@ -11,8 +11,8 @@ rule all:
         'example.txt'
 
 rule example:
-    input:
-        config["file1"]
+    # input:
+    #     "input_file.txt" # this rule doesn't need an input file
     output:
         'example.txt'
     message:
