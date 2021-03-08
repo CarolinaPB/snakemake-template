@@ -64,3 +64,5 @@ Other flags:
 - -R [rulename] : run this specific rule
 - --max-jobs-per-second \<N> : sometimes there are some problems with the job timings/ many jobs being submitted at once so it's good to choose a low number
 
+--------
+If running the rules using slurm it's important that the logs_slurm directory has been created beforehand
