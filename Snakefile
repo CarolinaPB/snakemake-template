@@ -4,6 +4,11 @@ pipeline = "snakemake-template" # replace with your pipeline's name
 
 
 include: "rules/create_file_log.smk"
+    
+if "OUTDIR" in config:
+    workdir: config["OUTDIR"]
+
+makedirs("logs_slurm")
 
 rule all:
     input:
